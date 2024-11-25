@@ -1,0 +1,24 @@
+<input type="text" style="display:none" [(ng-model)]="device.id" id="deviceId">
+<form name="export" id="exportForm" action="/devicecontrol/operations" method="post">
+  <div style="display: flex; flex-direction: column; align-items: flex-start;">
+  <input class="form-group" type="text" id="inputData">
+  <br>
+  <label title="Minutes" class="c8y-radio radio-inline">
+    <input type="radio" name="unit" value="Minutes">
+    <span></span>
+    <span>minutes</span>
+  </label>
+  <label title="Secondes" class="c8y-radio radio-inline">
+    <input type="radio" name="unit" value="Secondes">
+    <span></span>
+    <span>secondes</span>
+  </label>
+  <label title="Hours" class="c8y-radio radio-inline">
+    <input type="radio" name="unit" value="Hours">
+    <span></span>
+    <span>heures</span>
+  </label>
+  </div>
+  <br>
+  <button class="btn btn-default" type="submit" (click)="handleFormSubmission()">Modification fréquence d'échantillonage</button>
+</form>
